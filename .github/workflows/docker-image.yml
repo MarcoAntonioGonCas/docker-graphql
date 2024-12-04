@@ -28,10 +28,13 @@ jobs:
     - name: build Docker Image
       run: | 
         docker build -t marcoantoniogc/docker-graphql:0.0.2 . 
+        docker build -t marcoantoniogc/docker-graphql:latest . 
 
     - name: Push Docker Image
       run: | 
-        docker push marcoantoniogc/docker-graphql:0.0.2 
+        docker push marcoantoniogc/docker-graphql:0.0.2
+        docker push marcoantoniogc/docker-graphql:latest
+        
     
         
     # - name: Build the Docker image
